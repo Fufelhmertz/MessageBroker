@@ -19,8 +19,11 @@ var messageBroker = new Broker();
 messageBroker.Subscribe(subcriber);
  
 //Выполняем рассылку. Результат выводится на консоль
-messageBroker.Post(message);
+messageBroker.Post(message); //Вывод на консоль test
  
+//Получить последнее сообщение
+var lastMessage = subcriber.LastMessage; //test
+
 //Удаляем подписанта из рассылки
 messageBroker.UnSubscribe(subcriber);
  
