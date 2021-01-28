@@ -18,7 +18,7 @@ var messageBroker = new Broker();
 //Добавляем подписанта в рассылку
 messageBroker.Subscribe(subcriber);
  
-//Выполняем рассылку
+//Выполняем рассылку. Результат выводится на консоль
 messageBroker.Post(message);
  
 //Удаляем подписанта из рассылки
