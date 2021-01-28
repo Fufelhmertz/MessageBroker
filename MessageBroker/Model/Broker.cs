@@ -13,6 +13,9 @@ namespace MessageBroker.Model
             subscribers = new List<ISubscriber>();
         }
 
+        /// <summary>
+        /// Метод для рассылки сообщения всем подписантам
+        /// </summary>        
         public void Post(IMessage message)
         {
             if (message == null)
@@ -28,6 +31,9 @@ namespace MessageBroker.Model
             subscribers.ForEach(x => x.PrintMessage(this, message));
         }
 
+        /// <summary>
+        /// Метод для добавления нового подписанта к рассылке
+        /// </summary>        
         public void Subscribe(ISubscriber subscriber)
         {
             if (subscribers.Contains(subscriber))
@@ -38,6 +44,9 @@ namespace MessageBroker.Model
             subscribers.Add(subscriber);
         }
 
+        /// <summary>
+        /// Метод удаления подписанта из рассыки
+        /// </summary>   
         public void UnSubscribe(ISubscriber subscriber)
         {
             if (!subscribers.Contains(subscriber))
