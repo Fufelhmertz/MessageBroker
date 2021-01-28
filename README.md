@@ -19,7 +19,7 @@ var messageBroker = new Broker();
 messageBroker.Subscribe(subcriber);
  
 //Выполняем рассылку
-messageBroker.Post(mess);
+messageBroker.Post(message);
  
 //Удаляем подписанта из рассылки
 messageBroker.UnSubscribe(subcriber);
