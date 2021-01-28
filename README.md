@@ -13,15 +13,15 @@ var message = new Message("test");
 //Создаем подписанта
 var subcriber = new Subscriber("TestUser");
 
- var messageBroker = new Broker();
+var messageBroker = new Broker();
  
- //Добавляем подписанта в рассылку
- messageBroker.Subscribe(subcriber);
+//Добавляем подписанта в рассылку
+messageBroker.Subscribe(subcriber);
  
- //Выполняем рассылку
- messageBroker.Post(mess);
+//Выполняем рассылку
+messageBroker.Post(mess);
  
- //Удаляем подписанта из рассылки
- messageBroker.UnSubscribe(subcriber);
+//Удаляем подписанта из рассылки
+messageBroker.UnSubscribe(subcriber);
  
 ```
