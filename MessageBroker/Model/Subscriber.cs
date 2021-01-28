@@ -7,6 +7,8 @@ namespace MessageBroker.Model
     {
         public string SubscriberName { get; private set; }
 
+        public string LastMessage { get; private set; }
+
         public Subscriber(string name)
         {
             SubscriberName = name;
@@ -14,6 +16,8 @@ namespace MessageBroker.Model
 
         public void PrintMessage(object sender, IMessage message)
         {
+            LastMessage = message.Content;
+
             Console.WriteLine(message.Content);
         }
     }
